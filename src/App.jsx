@@ -1,9 +1,11 @@
+// import Navbar from "./Components/Navbar"
+import LandingPage from "./Components/LandingPage"
 
 function App() {
 
   return (
     <>
-      <h1>hi</h1>
+      <LandingPage/>
     </>
   )
 }
