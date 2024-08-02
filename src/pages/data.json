@@ -1,0 +1,20 @@
+[ {
+    "title":"Physical Health",
+    "description":"Physical health refers to the well-being of the body and its ability to function optimally in daily activities.",
+    "noOfPoints":2,
+    "photoObj":{
+        "photo1":"",
+        "photo2":""
+    },
+    "pointObj":{
+        "point1":{
+            "pointTitle":"Healthy Eating",
+             "pointDescription":"Focus on a balanced diet with plenty of fruits, vegetables, whole grains, lean proteins, and healthy fats.Stay hydrated by drinking plenty of water throughout the day.Limit processed foods, sugar, and unhealthy fats"
+        },
+        "point2":{
+            "pointTitle":"Regular Exercise:",
+            "pointDescription":"Regular exercise refers to the consistent practice of physical activities aimed at improving or maintaining overall health and fitness. It involves a variety of movements that work different parts of the body, providing numerous benefits to physical and mental well-being."
+          }
+    }
+}
+]
