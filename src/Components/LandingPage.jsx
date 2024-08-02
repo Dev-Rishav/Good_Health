@@ -47,8 +47,8 @@ const LandingPage = () => {
             "Social Health",
           ].map((title, index) => (
             <div key={index} className="bg-gray-800 p-4 rounded-2xl">
-              <div className="flex justify-between items-center mb-2"
-                   onclick={()=>navigate(`/post/${title}`)}>
+              <div onClick={()=>navigate(`/post/${title}`)}
+               className="flex justify-between items-center mb-2 cursor-pointer">
                 <h3 className="font-bold text-sm">{title}</h3>
                 <span className="text-xs">{index+1}</span>
               </div>
