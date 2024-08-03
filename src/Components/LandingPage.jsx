@@ -24,7 +24,7 @@ const LandingPage = () => {
             alt="Background"
           />
           <div className="relative z-10 w-1/2 pr-4 text-white">
-            <p className="text-sm mb-2 text-yellow-400">Mental Health</p>
+            <p className="text-sm mb-2 text-yellow-400">IBM CBR'S</p>
             <h1 className="text-5xl font-bold mb-6">Sustainable Development</h1>
             <p className="text-lg mb-8 leading-relaxed">
               Embark on a journey towards better mental health and sustainable

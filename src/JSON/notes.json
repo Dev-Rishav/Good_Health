@@ -5,13 +5,61 @@
     "topics": [
       {
         "pointTitle": "Healthy Eating",
-        "pointPhoto": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
-        "pointDescription": "Focus on a balanced diet with plenty of fruits, vegetables, whole grains, lean proteins, and healthy fats.Stay hydrated by drinking plenty of water throughout the day.Limit processed foods, sugar, and unhealthy fats"
+        "pointPhoto": "https://www.bhf.org.uk/-/media/images/information-support/support/healthy-living/healthy-eating/fruits-and-vegetables-620x400.jpg?h=400&w=620&rev=23d0aed687fc4a508e027bf7ffae5957&hash=0C97A88A71A0C2730A3C82ACDC1489AB",
+        "pointDescription": "Focus on a balanced diet with plenty of fruits, vegetables, whole grains, lean proteins, and healthy fats. Stay hydrated by drinking plenty of water throughout the day. Limit processed foods, sugar, and unhealthy fats."
       },
       {
         "pointTitle": "Regular Exercise",
-        "pointPhoto": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
+        "pointPhoto": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         "pointDescription": "Regular exercise refers to the consistent practice of physical activities aimed at improving or maintaining overall health and fitness. It involves a variety of movements that work different parts of the body, providing numerous benefits to physical and mental well-being."
+      }
+    ]
+  },
+  {
+    "title": "Mental Health",
+    "description": "Mental health encompasses emotional, psychological, and social well-being.",
+    "topics": [
+      {
+        "pointTitle": "Stress Management",
+        "pointPhoto": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1099&q=80",
+        "pointDescription": "Learn techniques to manage stress, such as deep breathing, meditation, and time management."
+      },
+      {
+        "pointTitle": "Seeking Professional Help",
+        "pointPhoto": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "pointDescription": "Don't hesitate to seek help from mental health professionals when needed. Therapy and counseling can be beneficial for many mental health concerns."
+      }
+    ]
+  },
+  {
+    "title": "Psychological Health",
+    "description": "Psychological health focuses on cognitive and emotional well-being.",
+    "topics": [
+      {
+        "pointTitle": "Positive Thinking",
+        "pointPhoto": "https://images.unsplash.com/photo-1495727034151-8fdc73e332a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1465&q=80",
+        "pointDescription": "Practice positive thinking and reframing negative thoughts to improve overall psychological well-being."
+      },
+      {
+        "pointTitle": "Mindfulness",
+        "pointPhoto": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80",
+        "pointDescription": "Practice mindfulness techniques to stay present and reduce anxiety about the future or regrets about the past."
+      }
+    ]
+  },
+  {
+    "title": "Social Health",
+    "description": "Social health involves building and maintaining healthy relationships with others.",
+    "topics": [
+      {
+        "pointTitle": "Building Strong Relationships",
+        "pointPhoto": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80",
+        "pointDescription": "Foster strong, supportive relationships with family, friends, and your community."
+      },
+      {
+        "pointTitle": "Effective Communication",
+        "pointPhoto": "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "pointDescription": "Develop effective communication skills to improve your interactions with others and build stronger connections."
       }
     ]
   }

@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { FaHome, FaUsers, FaQuestionCircle, FaSignInAlt, FaArrowLeft } from 'react-icons/fa';
+import Navbar from "./Navbar";
+import {FaArrowLeft} from "react-icons/fa";
+import healthData from '../JSON/notes.json';
 
 const Post = () => {
   const navigate = useNavigate();
+<<<<<<< HEAD
 
   const data = [{
     "title":"Physical Health",
@@ -97,11 +100,13 @@ const Post = () => {
 ]
 }]
 
+=======
+>>>>>>> cf523075496ea146497ff31d6b922b877d926e6a
   const { title } = useParams();
   const [item, setItem] = useState(null);
 
   useEffect(() => {
-    const filteredItem = data.find((d) => d.title === title);
+    const filteredItem = healthData.find((d) => d.title === title);
     setItem(filteredItem);
   }, [title]);
 
@@ -113,39 +118,20 @@ const Post = () => {
     );
   }
 
+  const fallbackImage = "https://via.placeholder.com/400x300?text=Image+Not+Available";
+
   return (
     <div className="bg-gradient-to-b from-[#F8F4E1] to-[#E8DFC7] text-[#543310] min-h-screen">
-      <nav className="flex justify-between items-center py-6 px-8 bg-[#F8F4E1] shadow-md">
-        <div className="text-[#543310] text-3xl font-bold">Good Health</div>
-        <ul className="flex space-x-6 text-sm">
-          {[
-            { name: 'Home', icon: FaHome, path: '/' },
-            { name: 'Team', icon: FaUsers, path: '/team' },
-            { name: 'About', icon: FaQuestionCircle, path: '/about' },
-            { name: 'Login', icon: FaSignInAlt, path: '/login' },
-          ].map((item, index) => (
-            <li
-              key={index}
-              onClick={() => navigate(item.path)}
-              className="cursor-pointer flex items-center hover:text-orange-500 transition-colors duration-300"
-            >
-              <item.icon className="mr-2" />
-              {item.name}
-            </li>
-          ))}
-        </ul>
-      </nav>
-
+      <Navbar/>
       <header className="text-center py-12 px-4 bg-[#AF8F6F] text-white">
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold mb-4">{item.title}</h1>
           <p className="text-xl max-w-2xl mx-auto">{item.description}</p>
         </div>
       </header>
-
       <main className="container mx-auto py-12 px-4">
-        <button 
-          onClick={() => navigate('/')} 
+        <button
+          onClick={() => navigate("/")}
           className="mb-8 flex items-center text-[#543310] hover:text-orange-500 transition-colors duration-300"
         >
           <FaArrowLeft className="mr-2" />
@@ -161,9 +147,13 @@ const Post = () => {
               <div className="md:flex">
                 <div className="md:flex-shrink-0">
                   <img
-                    src={card.pointPhoto}
+                    src={card.pointPhoto || fallbackImage}
                     alt={card.pointTitle}
                     className="h-48 w-full object-cover md:w-48"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = fallbackImage;
+                    }}
                   />
                 </div>
                 <div className="p-8">
