@@ -1,13 +1,15 @@
 // import Navbar from "./Components/Navbar"
 import LandingPage from "./Components/LandingPage"
-import Test from "./Components/Test"
+import Navbar from "./Components/Navbar"
+// import Test from "./Components/Test"
 
 function App() {
 
   return (
     <>
       <LandingPage/>
-      {/* <Test/> */}
+
+      {/* <Navbar/> */}
     </>
   )
 }
