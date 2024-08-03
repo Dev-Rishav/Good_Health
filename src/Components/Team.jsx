@@ -1,6 +1,9 @@
 import React from "react";
 import Navbar from "./Navbar";
-import bg from '../Assets/bg.jpg'
+import rishav from '../Assets/rishav.jpeg'
+import Atul from '../Assets/atul.jpeg'
+import Rittik from '../Assets/rittik.jpeg'
+import vikas from '../Assets/vikas.jpeg'
 
 const Team = () => {
   return (
@@ -26,11 +29,11 @@ const Team = () => {
           </p>
         </div>
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl ">
+          <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
             
              <img
-                className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src={bg}
+                className="object-cover  w-full h-56 md:h-64 xl:h-80 "
+                src={rishav}
                />
             <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
               <p className="mb-1 text-lg font-bold text-gray-100">
@@ -38,8 +41,7 @@ const Team = () => {
               </p>
               <p className="mb-4 text-xs text-gray-100">Team Leader</p>
               <p className="mb-4 text-xs tracking-wide text-gray-400">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod,
-                officiis.
+                JavaScript || React.JS || Tailwind || Firebase || Node.js || Oracle DB || Java || Problem Solving
               </p>
               <div className="flex items-center justify-center space-x-3">
                 <a
@@ -73,19 +75,18 @@ const Team = () => {
           </div>
           <div>
             <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-              {/* <img
+               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://media.licdn.com/dms/image/D5603AQHnGrSrfUAWzg/profile-displayphoto-shrink_200_200/0/1691404862659?e=2147483647&v=beta&t=PuixSunWYs8Gw-qqIFUOEzf8rnFkQqasGmWXXxpdnDw"
+                src={Atul}
                 alt="Person"
-              /> */}
+              /> 
               <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-1 text-lg font-bold text-gray-100">
                   Atul Tandan
                 </p>
                 <p className="mb-4 text-xs text-gray-100">Team Member </p>
                 <p className="mb-4 text-xs tracking-wide text-gray-400">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Ducimus veritatis necessitatibus consequatur.
+                  Javascript || React.js || Tailwind || Java || Problem Solving
                 </p>
                 <div className="flex items-center justify-center space-x-3">
                   <a
@@ -120,19 +121,18 @@ const Team = () => {
           </div>
           <div>
             <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-              {/* <img
+               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://media.licdn.com/dms/image/D4D03AQHbQqAIuq-MJg/profile-displayphoto-shrink_200_200/0/1708619059978?e=2147483647&v=beta&t=IwXMyZucM-kK7L1dFIg6cMjwyLUaqZ3IB1LvLx_p0Hk"
+                src={Rittik}
                 alt="Person"
-              /> */}
+              />
               <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-1 text-lg font-bold text-gray-100">
                   Ritik Parmar
                 </p>
                 <p className="mb-4 text-xs text-gray-100">Team Member</p>
                 <p className="mb-4 text-xs tracking-wide text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Molestiae velit necessitatibus officia!
+                Javascript || CSS || C++ || Problem Solving
                 </p>
                 <div className="flex items-center justify-center space-x-3">
                   <a
@@ -167,19 +167,18 @@ const Team = () => {
           </div>
           <div>
             <div className="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl">
-              {/* <img
+               <img
                 className="object-cover w-full h-56 md:h-64 xl:h-80"
-                src="https://media.licdn.com/dms/image/D4D03AQH76eTxIIRvmA/profile-displayphoto-shrink_800_800/0/1719847340036?e=1727913600&v=beta&t=h23EBDQFeF4x1iOi1gsxdy34HAK84qwUg4BTdhIGGoY"
+                src={vikas}
                 alt="Person"
-              /> */}
+              /> 
               <div className="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
                 <p className="mb-1 text-lg font-bold text-gray-100">
-                  Vikash Nayma
+                  Vikas Nayma
                 </p>
                 <p className="mb-4 text-xs text-gray-100">Team Member</p>
                 <p className="mb-4 text-xs tracking-wide text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Eligendi nam molestiae voluptatum!
+                Javascript || React.js || Tailwind || C++ || Problem Solving
                 </p>
                 <div className="flex items-center justify-center space-x-3">
                   <a
