@@ -54,7 +54,7 @@ const Post =()=>{
                         console.log(card);
 
                         return(
-                            <div key={index} className=" bg-gray-800 rounded-lg shadow-lg p-6 flex items-center space-x-6">
+                            <div key={index} className=" bg-gray-800 hover:scale-105 duration-300 rounded-lg shadow-lg p-6 flex items-center space-x-6">
                                 <img src={card.pointPhoto} alt={index} class="w-40 h-40 object-cover rounded-lg"/>
                                 <div>
                                     <h3 className=" text-white text-2xl font-semibold mb-3">{card.pointTitle}</h3>
