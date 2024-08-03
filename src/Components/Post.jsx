@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-
-import { useParams, useNavigate } from "react-router";
-//import { motion } from 'framer-motion';
-//import { data } from './data.json';
+import { useParams, useNavigate } from "react-router-dom";
+import { FaHome, FaUsers, FaQuestionCircle, FaSignInAlt, FaArrowLeft } from 'react-icons/fa';
 
 const Post = () => {
   const navigate = useNavigate();
@@ -18,7 +16,7 @@ const Post = () => {
           pointPhoto:
             "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8",
           pointDescription:
-            "Focus on a balanced diet with plenty of fruits, vegetables, whole grains, lean proteins, and healthy fats.Stay hydrated by drinking plenty of water throughout the day.Limit processed foods, sugar, and unhealthy fats",
+            "Focus on a balanced diet with plenty of fruits, vegetables, whole grains, lean proteins, and healthy fats. Stay hydrated by drinking plenty of water throughout the day. Limit processed foods, sugar, and unhealthy fats.",
         },
         {
           pointTitle: "Regular Exercise",
@@ -33,77 +31,88 @@ const Post = () => {
 
   const { title } = useParams();
   const [item, setItem] = useState(null);
+
   useEffect(() => {
     const filteredItem = data.find((d) => d.title === title);
     setItem(filteredItem);
   }, [title]);
 
   if (!item) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className="flex justify-center items-center h-screen bg-[#F8F4E1] text-[#543310]">
+        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-[#AF8F6F]"></div>
+      </div>
+    );
   }
-  return (
-    <div className="bg-gray-900 text-gray-900 ">
-      {/* navbar
-       */}
 
-      <nav className="flex justify-between items-center  py-6 px-6">
-        <div className="text-purple-500 text-2xl">Good Health</div>
-        <ul className="flex space-x-4 text-sm text-purple-100">
-          <li onClick={() => navigate("/")} className="cursor-pointer">
-            Home
-          </li>
-          <li onClick={() => navigate("/team")} className="cursor-pointer">
-            Team
-          </li>
-          <li onClick={() => navigate("/faq")} className="cursor-pointer">
-            FAQ
-          </li>
-          <li onClick={() => navigate("/login")} className="cursor-pointer">
-            Login
-          </li>
+  return (
+    <div className="bg-gradient-to-b from-[#F8F4E1] to-[#E8DFC7] text-[#543310] min-h-screen">
+      <nav className="flex justify-between items-center py-6 px-8 bg-[#F8F4E1] shadow-md">
+        <div className="text-[#543310] text-3xl font-bold">Good Health</div>
+        <ul className="flex space-x-6 text-sm">
+          {[
+            { name: 'Home', icon: FaHome, path: '/' },
+            { name: 'Team', icon: FaUsers, path: '/team' },
+            { name: 'About', icon: FaQuestionCircle, path: '/about' },
+            { name: 'Login', icon: FaSignInAlt, path: '/login' },
+          ].map((item, index) => (
+            <li
+              key={index}
+              onClick={() => navigate(item.path)}
+              className="cursor-pointer flex items-center hover:text-orange-500 transition-colors duration-300"
+            >
+              <item.icon className="mr-2" />
+              {item.name}
+            </li>
+          ))}
         </ul>
       </nav>
 
-      <header className=" text-white p-4">
-        <div className="container mx-auto text-center">
-          <h1 className="text-gray-300 text-2xl font-bold mb-2">
-            {item.title}
-          </h1>
-          <p className="text-gray-400 text-lg">{item.description}</p>
+      <header className="text-center py-12 px-4 bg-[#AF8F6F] text-white">
+        <div className="container mx-auto">
+          <h1 className="text-4xl font-bold mb-4">{item.title}</h1>
+          <p className="text-xl max-w-2xl mx-auto">{item.description}</p>
         </div>
       </header>
 
-      <main className="  container mx-auto py-12">
-        <section className="mb-12">
-          <div className="space-y-8">
-            {/* topic card */}
-            {item.topics.map((card, index) => {
-              const { subtopic, pic, descrp } = card;
-              //   console.log(card);
+      <main className="container mx-auto py-12 px-4">
+        <button 
+          onClick={() => navigate('/')} 
+          className="mb-8 flex items-center text-[#543310] hover:text-orange-500 transition-colors duration-300"
+        >
+          <FaArrowLeft className="mr-2" />
+          Back to Home
+        </button>
 
-              return (
-                <div
-                  key={index}
-                  className=" bg-gray-800 hover:scale-105 duration-300 rounded-lg shadow-lg p-6 flex items-center space-x-6"
-                >
+        <section className="space-y-12">
+          {item.topics.map((card, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div className="md:flex">
+                <div className="md:flex-shrink-0">
                   <img
                     src={card.pointPhoto}
-                    alt={index}
-                    class="w-40 h-40 object-cover rounded-lg"
+                    alt={card.pointTitle}
+                    className="h-48 w-full object-cover md:w-48"
                   />
-                  <div>
-                    <h3 className=" text-white text-2xl font-semibold mb-3">
-                      {card.pointTitle}
-                    </h3>
-                    <p className="text-gray-400">{card.pointDescription}</p>
-                  </div>
                 </div>
-              );
-            })}
-          </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-semibold text-[#543310] mb-4">
+                    {card.pointTitle}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {card.pointDescription}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
         </section>
       </main>
     </div>
   );
 };
+
 export default Post;

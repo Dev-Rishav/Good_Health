@@ -1,63 +1,82 @@
 import bgImg from "../Assets/bg.jpg";
 import { useNavigate } from "react-router-dom";
+import { FaHome, FaUsers, FaQuestionCircle, FaSignInAlt, FaArrowRight } from 'react-icons/fa';
 
 const LandingPage = () => {
-    const navigate=useNavigate();
-  return (
-    <div className="bg-gray-900 text-white min-h-screen p-6">
-      <nav className="flex justify-between items-center mb-8">
-        <div className="text-purple-500 text-2xl">Good Health</div>
-        <ul className="flex space-x-4 text-sm text-purple-100">
-          <li onClick={()=>navigate('/')} className="cursor-pointer hover:bg-orange-300 hover:text-gray-800 hover:rounded-sm hover:scale-110 duration-200">Home</li>
-          <li onClick={()=>navigate('/team')} className="cursor-pointer">Team</li>
-          <li onClick={()=>navigate('/about')} className="cursor-pointer">About</li>
-          <li onClick={()=>navigate('/login')} className="cursor-pointer">Login</li>
-        </ul>
-      </nav>
+    const navigate = useNavigate();
 
-      <main className="max-w-4xl mx-auto">
-        <div className="bg-gray-800 rounded-3xl p-8 mb-8 relative overflow-hidden">
-          <img
-            src={bgImg}
-            className="absolute inset-0 w-full h-full object-cover filter blur-sm"
-          />
-          <div className="relative z-10 w-1/2 pr-4 text-white">
-            <p className="text-xs mb-2">Mental Health</p>
-            <h1 className="text-4xl font-bold mb-4">
-              Sustainable Development
-            </h1>
-            <p className="text-sm mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus qui mollitia, explicabo optio aspernatur nihil! Facere
-              ratione deleniti et dolore quibusdam asperiores ea quas minima
-              ipsam. Earum ipsum id asperiores.
-            </p>
-            <button className="bg-yellow-400 text-black px-6 py-2 rounded-full text-sm hover:scale-110 duration-300">
-              Break The Cycle
-            </button>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-4 gap-4 mb-8">
+    return (
+        <div className="bg-gradient-to-b from-[#F8F4E1] to-[#E8DFC7] text-[#543310] min-h-screen p-6">
+            <nav className="flex justify-between items-center mb-12">
+                <div className="text-3xl font-bold">Good Health</div>
+                <ul className="flex space-x-6 text-sm">
           {[
-            "Mental Health",
-            "Physical Health",
-            "Psycological Healh",
-            "Social Health",
-          ].map((title, index) => (
-            <div key={index} className="bg-gray-800 p-4 rounded-2xl">
-              <div onClick={()=>navigate(`/post/${title}`)}
-               className="flex justify-between items-center mb-2 cursor-pointer">
-                <h3 className="font-bold text-sm">{title}</h3>
-                <span className="text-xs">{index+1}</span>
-              </div>
-              <p className="text-xs text-gray-400">Brief description...</p>
-            </div>
+            { name: 'Home', icon: FaHome, path: '/' },
+            { name: 'Team', icon: FaUsers, path: '/team' },
+            { name: 'About', icon: FaQuestionCircle, path: '/about' },
+            { name: 'Login', icon: FaSignInAlt, path: '/login' },
+          ].map((item, index) => (
+            <li
+              key={index}
+              onClick={() => navigate(item.path)}
+              className="cursor-pointer flex items-center hover:text-orange-500 transition-colors duration-300"
+            >
+              <item.icon className="mr-2" />
+              {item.name}
+            </li>
           ))}
+        </ul>
+            </nav>
+
+            <main className="max-w-6xl mx-auto">
+                <div className="bg-gray-800 rounded-3xl p-12 mb-12 relative overflow-hidden shadow-2xl">
+                    <img
+                        src={bgImg}
+                        className="absolute inset-0 w-full h-full object-cover opacity-50"
+                        alt="Background"
+                    />
+                    <div className="relative z-10 w-1/2 pr-4 text-white">
+                        <p className="text-sm mb-2 text-yellow-400">Mental Health</p>
+                        <h1 className="text-5xl font-bold mb-6">
+                            Sustainable Development
+                        </h1>
+                        <p className="text-lg mb-8 leading-relaxed">
+                            Embark on a journey towards better mental health and sustainable well-being. 
+                            Our expert-guided approach helps you build resilience, foster personal growth, 
+                            and create lasting positive change in your life.
+                        </p>
+                        <button className="bg-yellow-400 text-black px-8 py-3 rounded-full text-lg font-semibold 
+                                           hover:bg-yellow-300 transition-all duration-300 flex items-center">
+                            Break The Cycle
+                            <FaArrowRight className="ml-2" />
+                        </button>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    {[
+                        "Mental Health",
+                        "Physical Health",
+                        "Psychological Health",
+                        "Social Health",
+                    ].map((title, index) => (
+                        <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div onClick={() => navigate(`/post/${title}`)}
+                                className="flex justify-between items-center mb-4 cursor-pointer">
+                                <h3 className="font-bold text-lg text-[#543310]">{title}</h3>
+                                <span className="text-sm bg-yellow-400 text-black px-3 py-1 rounded-full">{index + 1}</span>
+                            </div>
+                            <p className="text-sm text-gray-600">Discover strategies and insights to improve your {title.toLowerCase()}...</p>
+                            <button onClick={()=>navigate(`/post/${title}`)} className="mt-4 text-orange-500 hover:text-orange-600 transition-colors duration-300 flex items-center">
+                                Learn more
+                                <FaArrowRight className="ml-2" />
+                            </button>
+                        </div>
+                    ))}
+                </div>
+            </main>
         </div>
-      </main>
-    </div>
-  );
+    );
 };
 
 export default LandingPage;
