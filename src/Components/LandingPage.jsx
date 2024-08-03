@@ -1,8 +1,5 @@
-import Navbar from "./Navbar";
 import bgImg from "../Assets/bg.jpg";
 import { useNavigate } from "react-router-dom";
-
-
 
 const LandingPage = () => {
     const navigate=useNavigate();
@@ -10,12 +7,11 @@ const LandingPage = () => {
     <div className="bg-gray-900 text-white min-h-screen p-6">
       <nav className="flex justify-between items-center mb-8">
         <div className="text-purple-500 text-2xl">Good Health</div>
-        <ul className="flex space-x-4 text-sm">
-          <li>Home</li>
-          <li>Team</li>
-          <li>Token</li>
-          <li>FAQ</li>
-          <li>Connect</li>
+        <ul className="flex space-x-4 text-sm text-purple-100">
+          <li onClick={()=>navigate('/')} className="cursor-pointer hover:bg-orange-300 hover:text-gray-800 hover:rounded-sm hover:scale-110 duration-200">Home</li>
+          <li onClick={()=>navigate('/team')} className="cursor-pointer">Team</li>
+          <li onClick={()=>navigate('/about')} className="cursor-pointer">About</li>
+          <li onClick={()=>navigate('/login')} className="cursor-pointer">Login</li>
         </ul>
       </nav>
 

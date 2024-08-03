@@ -1,7 +1,8 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Faq = () => {
+
   const navigate=useNavigate()
   return (
     <div className="bg-gray-900 text-white min-h-screen p-6">
@@ -14,7 +15,7 @@ const Login = () => {
           <li onClick={() => navigate("/team")} className="cursor-pointer">
             Team
           </li>
-          <li onClick={() => navigate("/about")} className="cursor-pointer">
+          <li onClick={() => navigate("/faq")} className="cursor-pointer">
             FAQ
           </li>
           <li onClick={() => navigate("/login")} className="cursor-pointer">
@@ -26,4 +27,4 @@ const Login = () => {
   );
 };
 
-export default Login
+export default Faq;

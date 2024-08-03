@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import { useParams,useNavigate } from "react-router";
+import { useParams, useNavigate } from "react-router";
 //import { motion } from 'framer-motion';
 //import { data } from './data.json';
 
 const Post = () => {
-    const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const data = [
     {
@@ -49,10 +49,18 @@ const Post = () => {
       <nav className="flex justify-between items-center  py-6 px-6">
         <div className="text-purple-500 text-2xl">Good Health</div>
         <ul className="flex space-x-4 text-sm text-purple-100">
-          <li onClick={()=>navigate('/')} className="cursor-pointer">Home</li>
-          <li onClick={()=>navigate('/team')} className="cursor-pointer">Team</li>
-          <li onClick={()=>navigate('/faq')} className="cursor-pointer">FAQ</li>
-          <li onClick={()=>navigate('/login')} className="cursor-pointer">Login</li>
+          <li onClick={() => navigate("/")} className="cursor-pointer">
+            Home
+          </li>
+          <li onClick={() => navigate("/team")} className="cursor-pointer">
+            Team
+          </li>
+          <li onClick={() => navigate("/faq")} className="cursor-pointer">
+            FAQ
+          </li>
+          <li onClick={() => navigate("/login")} className="cursor-pointer">
+            Login
+          </li>
         </ul>
       </nav>
 
@@ -71,7 +79,7 @@ const Post = () => {
             {/* topic card */}
             {item.topics.map((card, index) => {
               const { subtopic, pic, descrp } = card;
-            //   console.log(card);
+              //   console.log(card);
 
               return (
                 <div
@@ -92,10 +100,9 @@ const Post = () => {
                 </div>
               );
             })}
-
           </div>
         </section>
-      </main> 
+      </main>
     </div>
   );
 };
