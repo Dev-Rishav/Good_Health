@@ -1,50 +1,93 @@
-import React from 'react'
-import { useState } from 'react';
-import Navigate from './Navbar';
-import img from '../Assets/bg.jpg'
+import React, { useState } from 'react';
+import { FaEnvelope, FaLock } from 'react-icons/fa';
+import { FcGoogle } from "react-icons/fc";
+import Navbar from './Navbar';
+import img from '../Assets/login.jpeg';
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [isSignup , setisSignup] = useState(false);
+  const [isSignup, setIsSignup] = useState(false);
+  const [formData, setFormData] = useState({ email: '', password: '' });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(formData);
+  };
+
   return (
-    <div className="bg-gradient-to-b from-[#F8F4E1] to-[#E8DFC7] text-[#543310] min-h-screen">
-    <Navigate/>
-    <div className='bg-[#a78059] flex items-center justify-center min-h-screen'>
-        <div className='bg-[#F8F4E1] flex rounded-lg shadow-lg max-w-3xl px-16'>
-          <div className='w-1/2 py-8 ml-3'>
-          <h3 className='text-lg font-bold ml-14 mb-2 text-gray-700'>{isSignup ? "Signup User" : "Login User"}</h3>
-            <input
-              type='email'
-              placeholder='Enter Email'
-              onChange={(e) => { setEmail(e.target.value) }}
-              value={email}
-              className='rounded-xl black my-3 pl-3 pr-2 py-2 text-sm'>
-            </input>
-            <input
-              type='password'
-              placeholder='Enter Password'
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-              className='rounded-xl black my-3 pl-3 pr-2 py-2 text-sm'
-            ></input>
-            <br></br>
-
-            <button className='bg-[#74512D] text-white rounded-xl px-20 py-2 my-3 hover:scale-105 hover:duration-300 '>{isSignup ? "Signup" : "Login"}</button>
-
-            <div className='flex mt-6'>
-              <p className='text-xs mt-1'>{isSignup ? "Already have an account?" : "Don't have an account?"}</p>
-              <button className='bg-[#a78059] text-white text-sm rounded-xl hover:scale-105 duration-300 mx-1 px-3 py-1' onClick={() => setisSignup(!isSignup)}>{isSignup ? "Login" : "Signup"}</button>
+    <div className="bg-gradient-to-b from-[#F8F4E1] to-[#E8DFC7] min-h-screen">
+      <Navbar />
+      <div className='flex items-center justify-center min-h-[calc(100vh-64px)]'>
+        <div className='bg-white rounded-2xl shadow-2xl overflow-hidden max-w-4xl w-full'>
+          <div className='flex flex-col md:flex-row'>
+            <div className='w-full md:w-1/2 p-10'>
+              <h2 className='text-4xl font-bold text-[#543310] mb-8'>
+                {isSignup ? "Create Account" : "Welcome Back"}
+              </h2>
+              <form onSubmit={handleSubmit} className='space-y-6'>
+                <div className="relative">
+                  <FaEnvelope className="absolute top-3 left-3 text-gray-400" />
+                  <input
+                    type='email'
+                    name='email'
+                    placeholder='Email'
+                    onChange={handleChange}
+                    value={formData.email}
+                    className='w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#a78059] transition duration-300'
+                  />
+                </div>
+                <div className="relative">
+                  <FaLock className="absolute top-3 left-3 text-gray-400" />
+                  <input
+                    type='password'
+                    name='password'
+                    placeholder='Password'
+                    onChange={handleChange}
+                    value={formData.password}
+                    className='w-full pl-10 pr-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#a78059] transition duration-300'
+                  />
+                </div>
+                <button 
+                  type='submit'
+                  className='w-full bg-[#74512D] text-white rounded-lg py-3 font-semibold hover:bg-[#543310] transition duration-300 transform hover:scale-105'
+                >
+                  {isSignup ? "Sign Up" : "Log In"}
+                </button>
+              </form>
+              <div className='mt-8 text-center'>
+                <p className='text-sm text-gray-600'>
+                  {isSignup ? "Already have an account?" : "Don't have an account?"}
+                  <button 
+                    onClick={() => setIsSignup(!isSignup)}
+                    className='ml-2 text-[#a78059] hover:underline focus:outline-none font-semibold'
+                  >
+                    {isSignup ? "Log In" : "Sign Up"}
+                  </button>
+                </p>
+              </div>
+              <div className='mt-8'>
+                <div className='relative'>
+                  <div className='absolute inset-0 flex items-center'>
+                    <div className='w-full border-t border-gray-300'></div>
+                  </div>
+                  <div className='relative flex justify-center text-sm'>
+                    <span className='px-2 bg-white text-gray-500'>Or continue with</span>
+                  </div>
+                </div>
+                <div className='mt-6'>
+                  <button className='w-full flex items-center justify-center px-4 py-3 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition duration-300 transform hover:scale-105'>
+                    <FcGoogle className='h-5 w-5  mr-2' />
+                    Google
+                  </button>
+                </div>
+              </div>
             </div>
-            <div className='flex items-center mx-16 mt-6'>
-              <p className='mx-6 font-bold text-gray-700'>Or</p>
+            <div className='hidden md:block w-1/2'>
+              <img src={img} alt='login' className='object-cover w-full h-full' />
             </div>
-
-            <button className='bg-[#a78059] text-white text-sm  rounded-xl px-6 py-3 mx-1 mt-8 hover:scale-105 duration-300'>Continue with Google</button>
-          </div>
-          <div className='w-1/2'>
-            <img src={img} alt='login image' className='mt-24 rounded-xl hidden md:block'/>
-            
           </div>
         </div>
       </div>
@@ -52,4 +95,4 @@ const Login = () => {
   );
 };
 
-export default Login
+export default Login;

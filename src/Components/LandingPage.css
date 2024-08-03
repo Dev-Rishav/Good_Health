@@ -1,0 +1,19 @@
+.roadmap-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  .roadmap-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .roadmap-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .roadmap-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
