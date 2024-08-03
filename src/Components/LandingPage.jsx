@@ -1,7 +1,8 @@
 import Navbar from "./Navbar";
 import bgImg from "../Assets/bg.jpg";
-
+import { useNavigate } from "react-router-dom";
 const LandingPage = () => {
+    const navigate=useNavigate();
   return (
     <div className="bg-gray-900 text-white min-h-screen p-6">
       <nav className="flex justify-between items-center mb-8">
@@ -46,9 +47,10 @@ const LandingPage = () => {
             "Social Health",
           ].map((title, index) => (
             <div key={index} className="bg-gray-800 p-4 rounded-2xl">
-              <div className="flex justify-between items-center mb-2">
+              <div onClick={()=>navigate(`/post/${title}`)}
+               className="flex justify-between items-center mb-2 cursor-pointer">
                 <h3 className="font-bold text-sm">{title}</h3>
-                <span className="text-xs">01</span>
+                <span className="text-xs">{index+1}</span>
               </div>
               <p className="text-xs text-gray-400">Brief description...</p>
             </div>

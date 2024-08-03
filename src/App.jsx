@@ -1,15 +1,21 @@
 // import Navbar from "./Components/Navbar"
-import LandingPage from "./Components/LandingPage"
-import Navbar from "./Components/Navbar"
-// import Test from "./Components/Test"
-
+import LandingPage from "./components/LandingPage"
+import {BrowserRouter as Router, Route, Routes,} from "react-router-dom";
+import Post from "./components/Post";
 function App() {
 
   return (
     <>
-      <LandingPage/>
+     <Router>
+        <Routes>
+          <Route path="/" element={ <LandingPage/>} />
+          <Route path="/post/:title" element={< Post/>} />
+        </Routes>
 
-      {/* <Navbar/> */}
+     </Router>
+
+     
+
     </>
   )
 }
