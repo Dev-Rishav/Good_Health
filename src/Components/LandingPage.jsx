@@ -1,5 +1,6 @@
 import bgImg from "../Assets/bg.jpg";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 import {
   FaHome,
   FaUsers,
@@ -12,29 +13,10 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-gradient-to-b from-[#F8F4E1] to-[#E8DFC7] text-[#543310] min-h-screen p-6">
-      <nav className="flex justify-between items-center mb-12">
-        <div className="text-3xl font-bold">Good Health</div>
-        <ul className="flex space-x-6 text-sm">
-          {[
-            { name: "Home", icon: FaHome, path: "/" },
-            { name: "Team", icon: FaUsers, path: "/team" },
-            { name: "About", icon: FaQuestionCircle, path: "/about" },
-            { name: "Login", icon: FaSignInAlt, path: "/login" },
-          ].map((item, index) => (
-            <li
-              key={index}
-              onClick={() => navigate(item.path)}
-              className="cursor-pointer flex items-center hover:text-orange-500 transition-colors duration-300"
-            >
-              <item.icon className="mr-2" />
-              {item.name}
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <main className="max-w-6xl mx-auto">
+    <div className="bg-gradient-to-b from-[#F8F4E1] to-[#E8DFC7] text-[#543310] min-h-screen">
+      <Navbar/>
+      <div className="p-6">
+      <main className="max-w-6xl mx-auto ">
         <div className="bg-gray-800 rounded-3xl p-12 mb-12 relative overflow-hidden shadow-2xl">
           <img
             src={bgImg}
@@ -95,6 +77,7 @@ const LandingPage = () => {
           ))}
         </div>
       </main>
+      </div>
     </div>
   );
 };
