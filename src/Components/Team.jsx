@@ -86,7 +86,7 @@ const Team = () => {
                 </p>
                 <p className="mb-4 text-xs text-gray-100">Team Member </p>
                 <p className="mb-4 text-xs tracking-wide text-gray-400">
-                  Javascript || React.js || Tailwind || Java || Problem Solving
+                  Javascript || React.js || Firebase || Tailwind || Java || Problem Solving
                 </p>
                 <div className="flex items-center justify-center space-x-3">
                   <a
@@ -149,7 +149,7 @@ const Team = () => {
                     </svg>
                   </a>
                   <a
-                    href=""
+                    href="https://github.com/ritikparmar45"
                     className="text-white transition-colors duration-300 hover:text-teal-accent-400"
                   >
                     <svg
@@ -178,7 +178,7 @@ const Team = () => {
                 </p>
                 <p className="mb-4 text-xs text-gray-100">Team Member</p>
                 <p className="mb-4 text-xs tracking-wide text-gray-400">
-                Javascript || React.js || Tailwind || C++ || Problem Solving
+                Javascript || React.js || Firebase ||  Tailwind || C++ || Problem Solving
                 </p>
                 <div className="flex items-center justify-center space-x-3">
                   <a
@@ -195,7 +195,7 @@ const Team = () => {
                     </svg>
                   </a>
                   <a
-                    href="https://github.com/atul074"
+                    href="https://github.com/vikasnayma"
                     className="text-white transition-colors duration-300 hover:text-teal-accent-400"
                   >
                     <svg
