@@ -1,6 +1,9 @@
 import Navbar from "./Navbar";
 import bgImg from "../Assets/bg.jpg";
 import { useNavigate } from "react-router-dom";
+
+
+
 const LandingPage = () => {
     const navigate=useNavigate();
   return (
