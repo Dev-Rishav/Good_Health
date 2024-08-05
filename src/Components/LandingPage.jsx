@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { FaArrowRight } from "react-icons/fa";
@@ -10,6 +10,7 @@ import './LandingPage.css';
 const LandingPage = () => {
   const navigate = useNavigate();
   const [showRoadmap, setShowRoadmap] = useState(false);
+  const [animatedCards, setAnimatedCards] = useState([]);
 
   const handleBreakTheCycleClick = () => {
     setShowRoadmap(!showRoadmap);
@@ -19,6 +20,13 @@ const LandingPage = () => {
     setShowRoadmap(false);
   };
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimatedCards(["Mental Health", "Physical Health", "Psychological Health", "Social Health"]);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="bg-gradient-to-b from-[#F8F4E1] to-[#E8DFC7] text-[#543310] min-h-screen">
       <Navbar />
@@ -27,7 +35,7 @@ const LandingPage = () => {
           <div className="bg-gray-800 rounded-3xl p-12 mb-12 relative overflow-hidden shadow-2xl ">
             <img
               src={bgImg}
-              className="absolute inset-0 w-full h-full object-cover opacity-50"
+              className=" md:block hidden absolute inset-0 w-full h-full object-cover opacity-50"
               alt="Background"
             />
             <div className=" p-4 relative z-10 w-1/2 pr-4 text-white">
@@ -64,7 +72,10 @@ const LandingPage = () => {
               (title, index) => (
                 <div
                   key={index}
-                  className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className={`bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 opacity-0 ${
+                    animatedCards.includes(title) ? 'animate-slide-in' : ''
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div
                     onClick={() => navigate(`/post/${title}`)}
