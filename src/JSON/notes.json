@@ -12,6 +12,16 @@
         "pointTitle": "Regular Exercise",
         "pointPhoto": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         "pointDescription": "Regular exercise refers to the consistent practice of physical activities aimed at improving or maintaining overall health and fitness. It involves a variety of movements that work different parts of the body, providing numerous benefits to physical and mental well-being."
+      },
+      {
+        "pointTitle": "Adequate Sleep",
+        "pointPhoto": "https://images.unsplash.com/photo-1564501049412-53362aa9bb7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "pointDescription": "Ensure you get 7-9 hours of quality sleep each night to allow your body to rest, recover, and function optimally during the day."
+      },
+      {
+        "pointTitle": "Routine Check-ups",
+        "pointPhoto": "https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "pointDescription": "Visit healthcare professionals regularly for check-ups and screenings to detect and address any health issues early."
       }
     ]
   },
@@ -28,6 +38,16 @@
         "pointTitle": "Seeking Professional Help",
         "pointPhoto": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         "pointDescription": "Don't hesitate to seek help from mental health professionals when needed. Therapy and counseling can be beneficial for many mental health concerns."
+      },
+      {
+        "pointTitle": "Mindfulness and Meditation",
+        "pointPhoto": "https://images.unsplash.com/photo-1518183214770-9cffbec72538?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "pointDescription": "Incorporate mindfulness and meditation practices into your daily routine to enhance emotional balance and reduce anxiety."
+      },
+      {
+        "pointTitle": "Connecting with Nature",
+        "pointPhoto": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "pointDescription": "Spend time outdoors and connect with nature to improve your mental well-being and reduce stress."
       }
     ]
   },
@@ -44,6 +64,16 @@
         "pointTitle": "Mindfulness",
         "pointPhoto": "https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1473&q=80",
         "pointDescription": "Practice mindfulness techniques to stay present and reduce anxiety about the future or regrets about the past."
+      },
+      {
+        "pointTitle": "Emotional Regulation",
+        "pointPhoto": "https://images.unsplash.com/photo-1519362909361-3a43f2074b5b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "pointDescription": "Develop skills to regulate your emotions effectively, ensuring a balanced and healthy emotional state."
+      },
+      {
+        "pointTitle": "Lifelong Learning",
+        "pointPhoto": "https://images.unsplash.com/photo-1506784926709-22f42f4e39bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "pointDescription": "Engage in lifelong learning to keep your mind active and improve cognitive function. This can include reading, taking up new hobbies, or pursuing educational opportunities."
       }
     ]
   },
@@ -60,6 +90,16 @@
         "pointTitle": "Effective Communication",
         "pointPhoto": "https://images.unsplash.com/photo-1573497019236-17f8177b81e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
         "pointDescription": "Develop effective communication skills to improve your interactions with others and build stronger connections."
+      },
+      {
+        "pointTitle": "Community Involvement",
+        "pointPhoto": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "pointDescription": "Participate in community activities and volunteer work to build a sense of belonging and contribute to the well-being of others."
+      },
+      {
+        "pointTitle": "Conflict Resolution",
+        "pointPhoto": "https://images.unsplash.com/photo-1607748854736-3b15f7c9e168?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "pointDescription": "Learn and apply conflict resolution skills to handle disagreements constructively and maintain healthy relationships."
       }
     ]
   }

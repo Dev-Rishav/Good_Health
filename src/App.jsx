@@ -5,6 +5,7 @@ import Post from "./Components/Post";
 import About from './Components/About';
 import Team from './Components/Team'
 import Login from './Components/Login'
+import Footer from "./Components/Footer";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         </Routes>
 
      </Router>
+     <Footer/>
 
      
 

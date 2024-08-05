@@ -38,7 +38,7 @@ const LandingPage = () => {
               className=" md:block hidden absolute inset-0 w-full h-full object-cover opacity-50"
               alt="Background"
             />
-            <div className=" p-4 relative z-10 w-1/2 pr-4 text-white">
+            <div className=" p-4 relative z-10 w-1/2 pr-4 text-white slide-in-left">
               <p className="text-sm mb-2 text-yellow-400">IBM CBR'S</p>
               <h1 className="text-5xl font-bold mb-6">Sustainable Development</h1>
               <p className="text-lg mb-8 leading-relaxed">

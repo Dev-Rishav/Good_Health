@@ -1,5 +1,9 @@
 import React from "react";
 import Navbar from './Navbar'
+import human from '../Assets/human.svg'
+import people from '../Assets/people.svg'
+import brain from '../Assets/brain.svg'
+import body from '../Assets/body.svg'
 
 const Faq = () => {
 
@@ -29,7 +33,7 @@ const Faq = () => {
                         <dt>
                             <div
                                 class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                                <img src="https://www.svgrepo.com/show/28524/muscle-flex-outline.svg" />
+                                <img src={body} />
                             </div>
                             <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">Physical Health</p>
                         </dt>
@@ -41,7 +45,7 @@ const Faq = () => {
                         <dt>
                             <div
                                 class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                                <img src="https://www.svgrepo.com/show/482779/brain-illustration-12.svg" />
+                                <img src={brain} />
                             </div>
                             <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">Mental Health
 
@@ -54,7 +58,7 @@ const Faq = () => {
                         <dt>
                             <div
                                 class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                                <img src="https://www.svgrepo.com/show/521200/people.svg" />
+                                <img src={people} />
 
                             </div>
                             <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">Social Health
@@ -67,7 +71,7 @@ const Faq = () => {
                         <dt>
                             <div
                                 class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
-                                <img src="https://www.svgrepo.com/show/351945/diagnoses.svg" />
+                                <img src={human} />
 
                             </div>
                             <p class="font-heading ml-16 text-lg leading-6 font-bold text-gray-700">Psychological Health

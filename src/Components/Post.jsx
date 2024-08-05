@@ -45,7 +45,7 @@ const Post = () => {
   return (
     <div className="bg-gradient-to-b from-[#F8F4E1] to-[#E8DFC7] text-[#543310] min-h-screen">
       <Navbar />
-      <header className="text-center py-16 px-4 bg-gradient-to-r from-[#AF8F6F] to-[#8B6B4F] text-white shadow-lg">
+      <header className="text-center py-6  bg-gradient-to-r from-[#cf955a] to-[#bd6212] text-white shadow-lg">
         <div className="container mx-auto">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">{item.title}</h1>
           <p className="text-lg md:text-xl max-w-2xl mx-auto font-light">{item.description}</p>
